@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <title>For You 🎂</title>
 
 <link rel="stylesheet" href="style.css">
 </head>
-
+<div id="rain-container"></div>
 <body>
 
 <div class="container">
@@ -58,6 +59,29 @@ function show() {
 
   // play musik
   document.getElementById("musik").play();
+  
+  function createEmoji() {
+  const container = document.getElementById("rain-container");
+
+  const emoji = document.createElement("div");
+  emoji.classList.add("emoji");
+
+  const emojis = ["🎀", "🎂", "✨","🎈","💓"];
+  emoji.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+
+  emoji.style.left = Math.random() * 100 + "vw";
+  emoji.style.animationDuration = (3 + Math.random() * 3) + "s";
+
+  container.appendChild(emoji);
+
+  setTimeout(() => {
+    emoji.remove();
+  }, 6000);
+}
+
+// jalankan terus
+setInterval(createEmoji, 500);
+
 }
 </script>
 
