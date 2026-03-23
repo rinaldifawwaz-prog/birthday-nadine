@@ -67,7 +67,7 @@ p {
 }
 
 .emoji {
-  position: absolute;
+  position: fixed;
   top: -50px;
   font-size: 24px;
   animation: fall linear infinite;
