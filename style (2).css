@@ -1,4 +1,4 @@
-body {
+webody {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #f8cdda, #fcb69f);
@@ -67,10 +67,10 @@ p {
 }
 
 .emoji {
-  position: absolute;
+  position: fixed;
   top: -50px;
-  font-size: 24px;
-  animation: fall linear infinite;
+  font-size: 20px;
+  pointer-events: none;
 }
 
 @keyframes fall {
